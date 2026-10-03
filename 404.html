@@ -4,11 +4,27 @@
   <meta charset="utf-8">
   <title>Rest Countries</title>
   <base href="/rest-countries-api-with-color-theme-switcher-master/">
+  <script>
+    const fallbackUrl = new URLSearchParams(window.location.search).get('__ghpages');
+    const basePath = '/rest-countries-api-with-color-theme-switcher-master/';
+
+    if (fallbackUrl) {
+      const restoredUrl = new URL(fallbackUrl, window.location.origin);
+
+      if (restoredUrl.origin === window.location.origin && restoredUrl.pathname.startsWith(basePath)) {
+        window.history.replaceState(
+          null,
+          '',
+          restoredUrl.pathname + restoredUrl.search + restoredUrl.hash
+        );
+      }
+    }
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 <link rel="stylesheet" href="styles-7RB3CKHT.css"></head>
 
 <body>
   <app-root></app-root>
-<script src="main-IZ2737N2.js" type="module"></script></body>
+<script src="main-EPF2B26Y.js" type="module"></script></body>
 </html>
